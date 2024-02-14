@@ -36,7 +36,7 @@ const ContactItem = ({ id, name, email, tel, address = null, postcode = null,ods
       tel: editedTel,
       address: editedAddress,
       postcode: editedPostcode,
-      ods:editedOds? editedOds.toUpperCase()||""
+      ods:editedOds? editedOds.toUpperCase():""
     });
    
 
