@@ -21,11 +21,11 @@ const Medications = () => {
                 <span className='form-row format '>
                     <GenericRadio property={regFormat} value='scr'      onClick={formatregSCR} >Copy from SCR </GenericRadio>
                     <GenericRadio property={regFormat} value='freetype' onClick={formatregFreetype} >Freetype</GenericRadio>
-                    {/* <GenericRadio property={regFormat} value='hie' onClick={formatregHie} >HIE</GenericRadio> */}
+                    <GenericRadio property={regFormat} value='hie' onClick={formatregHie} >HIE</GenericRadio>
                 </span>
                    <TextArea    name='regMeds'        value={regMeds}/>
                    {regMeds&& regFormat==='scr'? <Button  onClick={sortRegMeds}>Sort</Button>:null}
-                   {/* {regMeds&& regFormat==='hie'? <Button  onClick={sortRegHieMeds}>Sort</Button>:null}     */}
+                   {regMeds&& regFormat==='hie'? <Button  onClick={sortRegHieMeds}>Sort</Button>:null}    
               </YesNoRadio> 
           </FormAccordion>
           <FormAccordion title={'Acute Medicines'}>
@@ -33,12 +33,12 @@ const Medications = () => {
                 <span className='form-row format '>
                     <GenericRadio property={acuteFormat} value='scr'      onClick={formatAcuteSCR} >Copy from SCR </GenericRadio>
                     <GenericRadio property={acuteFormat} value='freetype' onClick={formatAcuteFreetype} >Freetype</           GenericRadio>
-                    {/* <GenericRadio property={acuteFormat} value='hie'      onClick={formatacuteHie}>HIE               </GenericRadio> */}
+                    <GenericRadio property={acuteFormat} value='hie'      onClick={formatacuteHie}>HIE               </GenericRadio>
                 </span>
                 <TextArea    name='acuteMeds'      value={acuteMeds}/>
 
                {acuteMeds &&acuteFormat==='scr' ? <Button  onClick={sortAcuteMeds}>Sort</Button>:null}
-               {/* {acuteMeds &&acuteFormat==='hie' ? <Button  onClick={sortAcuteHieMeds}>Sort</Button>:null} */}
+               {acuteMeds &&acuteFormat==='hie' ? <Button  onClick={sortAcuteHieMeds}>Sort</Button>:null}
               </YesNoRadio>
           </FormAccordion>
           <FormAccordion title={'OTC/Herbal Preparations/Recreational/Other'}>
