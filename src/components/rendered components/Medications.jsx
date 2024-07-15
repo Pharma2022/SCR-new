@@ -7,8 +7,9 @@ const Medications = () => {
 
 }=useFormContext()
 
-const sortAndSplit =(arr)=>    arr.length? arr.length===1? <p>{arr[0]}</p> :arr.split('\n').sort((a, b) => a.localeCompare(b)).map(item=><li key={nanoid()}>{item}</li>):null
- 
+
+const sortAndSplit =(arr)=>    arr.length? arr.length===1? <p>{arr[0]}</p> :arr.split('\n').filter(item=>item!="").sort((a, b) => a.localeCompare(b)).map(item=><li key={nanoid()}>{item}</li>):null
+  
 
   return (
     <div>
