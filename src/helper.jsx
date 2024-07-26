@@ -154,7 +154,7 @@ export function sortRepeats(str) {
   )
 
   export const singleOrDouble= element=>element.split('\n').length?
-  <ul style={{marginTop:0}}>{ element.split('\n').map(item=>(<li key={nanoid()}>{item}</li>))  }</ul>:
+  <ul style={{marginTop:0}}>{ element.split('\n').filter(item=>item!="").map(item=>(<li key={nanoid()}>{item}</li>))  }</ul>:
   <p style={{marginTop:0}}>{element}</p>
 
   export function addCommaAfterSecondToLastWord(str) {
