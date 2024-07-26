@@ -23,7 +23,7 @@ const Medications = () => {
                     <GenericRadio property={regFormat} value='freetype' onClick={formatregFreetype} >Freetype</GenericRadio>
                     <GenericRadio property={regFormat} value='hie' onClick={formatregHie} >HIE</GenericRadio>
                 </span>
-                   <TextArea    name='regMeds'        value={regMeds}/>
+                   <TextArea   rows={15} name='regMeds'        value={regMeds}/>
                    {regMeds&& regFormat==='scr'? <Button  onClick={sortRegMeds}>Sort</Button>:null}
                    {regMeds&& regFormat==='hie'? <Button  onClick={sortRegHieMeds}>Sort</Button>:null}    
               </YesNoRadio> 
@@ -35,7 +35,7 @@ const Medications = () => {
                     <GenericRadio property={acuteFormat} value='freetype' onClick={formatAcuteFreetype} >Freetype</           GenericRadio>
                     <GenericRadio property={acuteFormat} value='hie'      onClick={formatacuteHie}>HIE               </GenericRadio>
                 </span>
-                <TextArea    name='acuteMeds'      value={acuteMeds}/>
+                <TextArea  rows={15}  name='acuteMeds'      value={acuteMeds}/>
 
                {acuteMeds &&acuteFormat==='scr' ? <Button  onClick={sortAcuteMeds}>Sort</Button>:null}
                {acuteMeds &&acuteFormat==='hie' ? <Button  onClick={sortAcuteHieMeds}>Sort</Button>:null}
