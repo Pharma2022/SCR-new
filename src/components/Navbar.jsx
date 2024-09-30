@@ -48,9 +48,9 @@ const Navbar = () => {
       </button>
       <div className={`navbar-collapse ${!expanded ? 'collapse' : ''}`}>
         <ul className="navbar-nav ml- text-left">
-          <li className="navbar-brand" onClick={toggleNavbar}>
+{/*           <li className="navbar-brand" onClick={toggleNavbar}>
             Clinical applications
-          </li>
+          </li> */}
           {links.map(({ active, href, title, id }) => (
             <NavItem active={active} href={href} title={title} key={nanoid()} onClick={() => handleChange(id)} />
           ))}
