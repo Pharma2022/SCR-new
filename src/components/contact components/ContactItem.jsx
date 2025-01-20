@@ -79,7 +79,7 @@ const ContactItem = ({ id, name, email, tel, address = null, postcode = null,ods
          
          {currentUser&&(<div className="flex-row">
           <Button className='mr-2 copy-button' onClick={() => setIsEditing(true)}>Edit</Button>
-          <Button className='mr-2 copy-button' onClick={handleDelete}>Delete</Button> 
+{/*           <Button className='mr-2 copy-button' onClick={handleDelete}>Delete</Button>  */}
 
          </div>)}
         </>
